@@ -1,0 +1,4 @@
+[
+  "test_factorial.py::test_factors",
+  "test_factorial.py::test_negatives"
+]
