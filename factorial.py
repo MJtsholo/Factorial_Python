@@ -1,43 +1,28 @@
+import sys
+def factorial(numbers):
+	try:
+		numbers = int(numbers)
+	except:
+		print("That is not a number!")
+		return "That is not a number!"
 
-
-
-def factorial():
-	n = int(input("Please enter a whole number: "))
-	fact = 1
-	if n < 0:
-		print("Sorry, factorial does not exist for negative numbers")
-	elif n == 0:
-	   print("The factorial of 0 is 1")
+	if numbers > -1:
+		fact = 1
+		if numbers == 0:
+			print("1")
+			return 1
+		else:
+			while numbers >= 1:
+			 	fact = fact * numbers
+			 	numbers = numbers - 1
+			print(fact)
+			return fact
 	else:
-	   for n in range(1,n + 1):
-	       fact = fact * n
-	   print("The factorial of",n, "is ",fact)
-	
-def not_number():
-	while True:
-		try:
-			n = int(input("Please enter a whole number: "))
-			if type(n) == int :
-				#n = int(input("Please enter a whole number: "))
-				fact = 1
-				if n < 0:
-					print("Sorry, factorial does not exist for negative numbers")
-				elif n == 0:
-				   print("The factorial of 0 is 1")
-				else:
-				   for n in range(1,n + 1):
-				       fact = fact * n
-				   print("The factorial of",n, "is ",fact)
-			#	return ValueError
-			#factorial()
-		except:
-			print('That is not a number!')
-
-#factorial()
-not_number()		
-
+		print("False")
+		return False
 
 
 
 if __name__ == '__main__':
-	factors.factorial()
+	numbers = input("Please enter number: ")
+	factorial(numbers)

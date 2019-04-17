@@ -1,23 +1,25 @@
-from math import factorial
 
+from factorial import factorial
 import pytest
 
 def test_factors():
-	for n in range(2):
-		assert factorial(n) == factorial(n)
+	result = factorial(3)
+	assert result == 6
 
+	result = factorial(5)
+	assert result == 120
 
-def test_negatives():
-	with pytest.raises(AssertionError):
-		factorial(-4)
+	result = factorial(-2)
+	assert result == False
 
+	result = factorial(0)
+	assert result == 1
 
+	result = factorial("c")
+	assert result == "That is not a number!"
 
+	result = factorial("H")
+	assert result == "That is not a number!"
 
-
-
-	#assert main(3) == 6
-	#assert main(5) == 120
-	#assert main(2) == 2
-
-
+	result = factorial("")
+	assert result == "That is not a number!"
