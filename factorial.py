@@ -1,4 +1,4 @@
-import sys
+
 def factorial(numbers):
 	try:
 		numbers = int(numbers)
@@ -7,7 +7,7 @@ def factorial(numbers):
 		return "That is not a number!"
 
 	if numbers > -1:
-		fact = 1
+		fact = 1 #fact is 1 because after being multiplied by the input(fact * numbers) it gets stored in fact
 		if numbers == 0:
 			print("1")
 			return 1
